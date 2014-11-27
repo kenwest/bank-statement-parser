@@ -1,4 +1,4 @@
-bank-statement-parser
+Bank Statement Parser
 =====================
 
 Reads a CSV file containing a bank statement, scanning for patterns.
