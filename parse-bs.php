@@ -26,7 +26,7 @@ while ( ($columns = fgetcsv($input)) !== false ) {
 	$contact = $account = $comment = false;
 	$line = implode(',', $columns);
 	foreach ($map as $mapPattern => $mapContact) {
-		if ( preg_match('/' . $mapPattern . '/', $line) == 1 ) {
+		if ( preg_match('/' . $mapPattern . '/i', $line) == 1 ) {
 			if ( $contact === false && $comment === false ) {
 				$contact = $mapContact['id'];
 				$account = $mapContact['account'];

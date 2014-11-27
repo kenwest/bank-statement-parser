@@ -11,9 +11,9 @@ fputcsv($input, $columns);
 fclose($input);
 
 $lookup = fopen('/tmp/2-map-bs.csv', 'w');
-$columns = array('Id','Name','Pattern', 'Default account');
+$columns = array('Id','Name','Pattern', 'Account');
 fputcsv($lookup, $columns);
-$columns = array('1','West, Ken','single','ABC123');
+$columns = array('1','West, Ken','SINGLE','ABC123');
 fputcsv($lookup, $columns);
 $columns = array('2','Jacobs, David','do.ble','ABC124');
 fputcsv($lookup, $columns);
