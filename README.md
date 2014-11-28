@@ -38,6 +38,6 @@ Thus, a contact whose pattern is "(first)|(second)" and an account field contain
 
 It's theoretically possible that more than one subpattern will match. This gets complex ...
 
- * In the case of the alternation pattern "(abc)|(def)|..." the alternatives are tried left to right so put the special cases before the broad ones. Only one subpattern will match.
+ * In the case of the alternation pattern "(first)|(second)|(third)|..." the alternatives are tried left to right so put the special cases before the broad ones. Only one subpattern will match, so a line containing "first second" would match the "first" subpattern but not the "second".
  * In the case of nested subpatterns both can match. Say we wanted "broad" to map to account "ABC123" and "broad narrow" to map to "DEF456". In this case the pattern should be "(broad( narrow)?)" and the accounts "ABC123,DEF456".
  * Other cases should be tested before use!
